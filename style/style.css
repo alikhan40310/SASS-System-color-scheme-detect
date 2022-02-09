@@ -1,16 +1,9 @@
-html {
+:root {
   --bg: #fcfcfc;
   --bg-panel: #ebebeb;
   --color-heading: #0077ff;
   --color-text: #333333;
   --font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-html[data-theme='dark'] {
-  --bg: #33333;
-  --bg-panel: #434343;
-  --color-heading: #0077ff;
-  --color-text: #fff;
 }
 
 body {
@@ -108,16 +101,21 @@ html.transition *:after {
           transition-delay: 0 !important;
 }
 
-@media screen and (max-width: 800px) {
-  .GridCenter, .content {
-    -ms-grid-columns: 80%;
-        grid-template-columns: 80%;
-    -ms-grid-rows: (1fr)[1];
-        grid-template-rows: repeat(1, 1fr);
-        grid-template-areas: "title " "switch " "content";
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #312f2f;
+    --bg-panel: #575555;
+    --color-heading: #0077ff;
+    --color-text: #ece7e7;
   }
-  .content p {
-    margin-top: 30px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #fcfcfc;
+    --bg-panel: #ebebeb;
+    --color-heading: #0077ff;
+    --color-text: #333333;
   }
 }
 /*# sourceMappingURL=style.css.map */
